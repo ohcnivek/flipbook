@@ -1,0 +1,21 @@
+/* 
+  App.js styles 
+
+  Feel free to edit/remove existing styles in this file.
+*/
+
+.app {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: rem;
+}
+
+.appHeader {
+  font-size: calc(1rem + 2vmin);
+}
