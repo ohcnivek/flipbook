@@ -62,7 +62,17 @@ export const Flipbook = () => {
 
   return (
     <div className="flex justify-between">
-      <div className="flex">{currentFrame}</div>
+      <div className="relative w-[500px]">
+        {currentFrame}
+        {!playing && (
+          <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
+            <h3 class="text-xl text-white font-bold">Paused</h3>
+            <p class="mt-2 text-sm text-gray-300">
+              Hope you're liking the project!
+            </p>
+          </div>
+        )}
+      </div>
       <div className="flex flex-col pl-4 space-y-4">
         <VideoInfo props={videoMetaData} />
         <div>
