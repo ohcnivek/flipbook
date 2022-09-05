@@ -6,28 +6,28 @@ import clsx from "clsx";
 import VideoInfo from "./VideoInfo";
 
 export const Flipbook = () => {
-  const [videoMetaData, setVideoMetaData] = useState({
-    name: "",
-    description: "",
-    source: "",
-  });
   const [playing, setPlaying] = useState(true);
   const [frames, setFrames] = useState([]);
   const [currentFrameIndex, setCurrentFrameIndex] = useState(0);
   const [currentFrame, setCurrentFrame] = useState();
+  const [sliderValue, setSliderValue] = useState(65);
   const [sliderProps] = useState({
     min: 30,
     max: 100,
     value: 20,
     label: "Scroll to adjust the FPS (frames per second)",
   });
-  const [sliderValue, setSliderValue] = useState(65);
+  const [videoMetaData, setVideoMetaData] = useState({
+    name: "",
+    description: "",
+    source: "",
+  });
+
   const handleSliderChange = (e) => {
     if (e && e.target) {
       setSliderValue(e.target.value);
     }
   };
-
   const handleButtonClick = () => {
     setPlaying(!playing);
   };
@@ -53,13 +53,15 @@ export const Flipbook = () => {
   useInterval(() => {
     if (playing) {
       const IMAGE_PATH = `http://localhost:3001/${frames[currentFrameIndex]}`;
-      setCurrentFrame(<img src={`${IMAGE_PATH}`} alt="hi" />);
+      setCurrentFrame(
+        <img src={`${IMAGE_PATH}`} alt={`frame ${currentFrameIndex}`} />
+      );
       setCurrentFrameIndex((currentFrameIndex + 1) % frames.length);
     }
   }, 1000 / sliderValue);
 
   return (
-    <div className="flex justify-between ">
+    <div className="flex justify-between">
       <div className="flex">{currentFrame}</div>
       <div className="flex flex-col pl-4 space-y-4">
         <VideoInfo props={videoMetaData} />
