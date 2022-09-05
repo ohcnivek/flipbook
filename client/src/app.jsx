@@ -5,10 +5,9 @@ import "./app_tailwind.css";
 export function App() {
   return (
     <div className="flex flex-col">
-      <header className="font-bold">
+      <header className="font-bold bg-blue-500">
         <h1>Digital flipbook player</h1>
       </header>
-      <div className="bg-blue">hi</div>
     </div>
   );
 }
