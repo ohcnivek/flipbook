@@ -21,7 +21,7 @@ export const Flipbook = () => {
     value: 20,
     label: "Scroll to adjust the FPS (frames per second)",
   });
-  const [sliderValue, setSliderValue] = useState(30);
+  const [sliderValue, setSliderValue] = useState(65);
   const handleSliderChange = (e) => {
     if (e && e.target) {
       setSliderValue(e.target.value);
