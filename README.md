@@ -1,4 +1,4 @@
-# Digital Flipbook Player
+# Digital Flipbook
 
 # To Start Up: 
 ### Additional Required Dependencies (Please install)
