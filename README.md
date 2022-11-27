@@ -1,6 +1,4 @@
-# Hyungyeon Cho, FE: Digital Flipbook Player
-FE Engineering new grad submission by Hyungyeon Cho (Kevin)
-
+# Digital Flipbook Player
 
 # To Start Up: 
 ### Additional Required Dependencies (Please install)
@@ -26,7 +24,7 @@ The page should look like this:
 - ✅ overlay when video is paused for additional user feedback
 
 
-# Approach to the product, including any design decisions or tradeoffs you made:
+# Approach
 - ```/api```
   - ```Utils.js``` - handles initial axios call to fetch frame paths (this is however only called once on the initial render in ```Flipbook.js```)
 - ```/components```
@@ -35,8 +33,7 @@ The page should look like this:
   - ```VideoInfo.js``` - container to display video metadata to user. future improvement would be deciding how to better display this — maybe something like youtube? or maybe even something like reels /tiktok? 
 - ```hooks``` - created a reusuable userInterval hook to enable declarative programming
 
-# Improvements to the performance: 
-- Scaling backend to get more frames, the max set was 600 frames per video
+
 
 
 
