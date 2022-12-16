@@ -1,7 +1,3 @@
-# Hyungyeon Cho, FE: Digital Flipbook Player
-FE Engineering new grad submission by Hyungyeon Cho (Kevin)
-
-
 # To Start Up: 
 ### Additional Required Dependencies (Please install)
 - tailwind, postcss, autoprefixer
@@ -33,10 +29,7 @@ The page should look like this:
   - ```Flipbook.js``` - main component rendered in app.jsx, contains core logic
   - ```InputSlider.js``` - reusuable input slider to handle the change in fps 
   - ```VideoInfo.js``` - container to display video metadata to user. future improvement would be deciding how to better display this — maybe something like youtube? or maybe even something like reels /tiktok? 
-- ```hooks``` - created a reusuable userInterval hook to enable declarative programming
-
-# Improvements to the performance: 
-- Scaling backend to get more frames, the max set was 600 frames per video
+- ```hooks``` - created a reusuable userInterval hook to enable declarative programmin
 
 
 
